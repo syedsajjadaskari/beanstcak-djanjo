@@ -10,9 +10,13 @@ router.register(r"authors", views.AuthorViewSet)
 urlpatterns = [
     # Homepage
     path("", views.home, name="home"),
-    # API endpoints
+    
+    # Demo endpoints for cloud computing demo
     path("health/", views.health_check, name="health_check"),
+    path("system-info/", views.system_info, name="system_info"),
+    path("load-test/", views.load_test, name="load_test"),
     path("stats/", views.book_stats, name="book_stats"),
+    
     # Include the router URLs
     path("", include(router.urls)),
 ]
